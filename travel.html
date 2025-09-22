@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дневник путешествий</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-color: #5cb85c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #4cae4c;
+        }
+        .nav button {
+            background-color: #fff;
+            color: #5cb85c;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .travel-form, .travel-feed {
+            margin-top: 20px;
+        }
+        .travel-form input, .travel-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        .travel-form button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .post {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .post h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .post-meta {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .post-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .rating {
+            background-color: #e8e8e8;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            Дневник путешествий
+        </header>
+
+        <div class="nav">
+            <button>Мои записи</button>
+            <button>Лента</button>
+            <button>Войти / Зарегистрироваться</button>
+        </div>
+
+        <section class="travel-form">
+            <h2>Расскажите о своём путешествии</h2>
+            <input type="text" placeholder="Местоположение (например, Париж, Франция)">
+            <textarea placeholder="Опишите ваше путешествие..."></textarea>
+            <input type="file" accept="image/*" multiple>
+            <div style="margin-top: 10px;">
+                <label>Оценка безопасности:</label>
+                <select>
+                    <option>Очень безопасно</option>
+                    <option>Безопасно</option>
+                    <option>Нейтрально</option>
+                    <option>Опасно</option>
+                </select>
+            </div>
+            <button style="margin-top: 15px;">Опубликовать</button>
+        </section>
+
+        <section class="travel-feed">
+            <h2>Путешествия других пользователей</h2>
+            <div class="post">
+                <h3>Путешествие по Японии</h3>
+                <div class="post-meta">Автор: Анна | Местоположение: Токио, Япония</div>
+                <p>Невероятная культура и очень вкусная еда!</p>
+                <img src="https://via.placeholder.com/600x400.png?text=Image+of+Japan+trip" alt="Путешествие по Японии" class="post-image">
+                <div class="rating">Оценка безопасности: **Безопасно**</div>
+            </div>
+
+            <div class="post">
+                <h3>Поход по Байкалу</h3>
+                <div class="post-meta">Автор: Максим | Местоположение: Озеро Байкал, Россия</div>
+                <p>Захватывающие виды и чистейшая вода. Настоящее приключение!</p>
+                <img src="https://via.placeholder.com/600x400.png?text=Image+of+Baikal+trip" alt="Поход по Байкалу" class="post-image">
+                <div class="rating">Оценка безопасности: **Очень безопасно**</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
